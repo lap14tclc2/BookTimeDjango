@@ -1,0 +1,56 @@
+[
+{
+  "model": "main.productag",
+  "fields": {
+    "name": "Romance",
+    "slug": "romance",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.productag",
+  "fields": {
+    "name": "Drama",
+    "slug": "drama",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.productag",
+  "fields": {
+    "name": "Science Fiction",
+    "slug": "science-fiction",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.productag",
+  "fields": {
+    "name": "Opensource",
+    "slug": "opensource",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.productag",
+  "fields": {
+    "name": "Teamwork",
+    "slug": "teamwork",
+    "description": "",
+    "active": true
+  }
+},
+{
+  "model": "main.productag",
+  "fields": {
+    "name": "Finance",
+    "slug": "finance",
+    "description": "",
+    "active": true
+  }
+}
+]

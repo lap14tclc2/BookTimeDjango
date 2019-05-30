@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.core import mail
+
 from  main import forms
 
 class TestForm(TestCase):
@@ -21,3 +22,24 @@ class TestForm(TestCase):
             'message': 'Hi there'
         })
         self.assertFalse(form.is_valid())
+    
+    def test_valid_singup_form_sends_mail(self):
+        form = forms.UserCreationForm(
+           {
+                "email":"user@gmail.com",
+                "password1": "vitlun112",
+                "password2": "vitlun112",
+           }
+        )
+        self.assertTrue(form.is_valid())
+        with self.assertLogs("main.forms", level="INFO") as cm:
+            form.send_mail()
+        self.assertEqual(len(mail.outbox), 1)
+        self.assertEqual(
+            mail.outbox[0].subject, "Welcome to Booktime"
+        )
+        self.assertGreaterEqual(len(cm.output), 1)
+        
+
+    
+
